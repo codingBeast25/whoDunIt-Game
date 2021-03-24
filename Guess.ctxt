@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=Guess
+comment1.params=who\ what\ where\ isSuggestion
+comment1.target=Guess(Card,\ Card,\ Card,\ boolean)
+numComments=2

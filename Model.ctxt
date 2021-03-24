@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Model
+comment1.params=playerCount\ suspectList\ weaponList\ locationList
+comment1.target=Model(int,\ java.util.ArrayList,\ java.util.ArrayList,\ java.util.ArrayList)
+comment2.params=
+comment2.target=void\ startGame()
+numComments=3
