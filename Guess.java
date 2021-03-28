@@ -16,19 +16,13 @@ public class Guess
         this.isSuggestion = isSuggestion;
     }
     
-    public Card getWho()
+    public ArrayList<Card> getGuessCards()
     {
-        return who;
-    }
-    
-    public Card getWhere()
-    {
-        return where;
-    }
-    
-    public Card getWhat()
-    {
-        return what;
+        ArrayList<Card> retList = new ArrayList<Card> ();
+        retList.add(who);
+        retList.add(what);
+        retList.add(where);
+        return retList;
     }
     
     public boolean isItSuggestion()
@@ -36,4 +30,8 @@ public class Guess
         return isSuggestion;
     }
     
+    public String toString()
+    {
+        return who.getValue() + " in " + where.getValue() + " with " + what.getValue(); 
+    }
 }

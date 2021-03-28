@@ -2,4 +2,10 @@
 comment0.target=Guess
 comment1.params=who\ what\ where\ isSuggestion
 comment1.target=Guess(Card,\ Card,\ Card,\ boolean)
-numComments=2
+comment2.params=
+comment2.target=java.util.ArrayList\ getGuessCards()
+comment3.params=
+comment3.target=boolean\ isItSuggestion()
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

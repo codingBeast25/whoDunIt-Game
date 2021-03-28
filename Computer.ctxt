@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Computer
+comment1.params=numPlayers\ index\ ppl\ places\ weapons
+comment1.target=void\ setUp(int,\ int,\ java.util.ArrayList,\ java.util.ArrayList,\ java.util.ArrayList)
+comment2.params=c
+comment2.target=void\ setCard(Card)
+comment3.params=
+comment3.target=int\ getIndex()
+comment4.params=g\ ip
+comment4.target=Card\ canAnswer(Guess,\ IPlayer)
+comment5.params=
+comment5.target=Guess\ getGuess()
+comment6.params=ip\ c
+comment6.target=void\ receiveInfo(IPlayer,\ Card)
+comment7.params=p
+comment7.target=boolean\ equals(java.lang.Object)
+numComments=8

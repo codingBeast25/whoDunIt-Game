@@ -2,8 +2,4 @@
 comment0.target=Main
 comment1.params=
 comment1.target=void\ main()
-comment2.params=cardsAdded\ list\ type
-comment2.target=void\ addCard(java.util.ArrayList,\ java.util.ArrayList,\ java.lang.String)
-comment3.params=
-comment3.target=java.lang.String\ getAlphaString()
-numComments=4
+numComments=2
