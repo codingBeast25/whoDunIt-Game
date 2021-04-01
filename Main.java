@@ -10,7 +10,7 @@ public class Main
     //total number of players including human players
     private static int totalPlayers;
 
-    public static void main(){
+    public static void main(String[] args){
         //Arraylist of Players,Suspects cards, Weapons cards, location cards
         ArrayList<IPlayer> playerList = new ArrayList<IPlayer> ();
         ArrayList<Card> pplNames= new ArrayList<Card> ();
@@ -50,14 +50,15 @@ public class Main
 
         //Take input from user about how many computer players does user wants to play with
         System.out.println("New Game Starts...");
-        Scanner sc= new Scanner(System.in);
-        System.out.println("How Many Computer Opponents will be Playing: ");
+
         totalPlayers = -1;
         while( totalPlayers < 1 ){
             try{
+                System.out.println("How Many Computer Opponents will be Playing: ");
+                Scanner sc= new Scanner(System.in);
                 totalPlayers = sc.nextInt()+1;   //total player is input+1(user himself)
             }
-            catch(NumberFormatException e){
+            catch(Exception e){
                 System.out.println("Enter valid input.");
             }
         }

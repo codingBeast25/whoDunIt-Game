@@ -56,19 +56,19 @@ public class Human implements IPlayer
         //if player has more than 1 card in common then ask for which card to show
         if(temp.size() > 1)
         {
-            Scanner sc= new Scanner(System.in);
-            int choice = -1;
             System.out.println("Player "+ip.getIndex()+ " asked you about " + g.toString() + ". Which do you show?");
+            int choice = -1;
             for(int i = 0; i < temp.size(); i ++){
                 System.out.println((i+1) + ". " + temp.get(i).getValue());
             }
             //loop until valid input entered
             while( choice < 1 || choice > temp.size()){
                 try{
+                    Scanner sc= new Scanner(System.in);
                     choice = sc.nextInt();
                 }
                 catch(NumberFormatException e){
-                    System.out.println("Enter valid input.");
+                    System.out.println("Enter valid input.Try Again.");
                 }
             }
             retCard = temp.get(choice-1);
@@ -85,42 +85,47 @@ public class Human implements IPlayer
     //this indicates its player's turn. He will guess now.
     public Guess getGuess()
     {
-        Scanner sc= new Scanner(System.in);
+
         Card who; //suspect
         Card where; //location
         Card what;  //weapon
+
         boolean isSuggestion = true; //is the guess suggestion?
         int choice = -1;
         String choiceOfSugg;
         int i = 0;
+
         //get the suspect card
         System.out.println("Which Person do you want to suggest?");
         for(Card curr : suspects)
             System.out.println(++i + ". "+curr.getValue());
+
         //loop until valid input entered
         while( choice < 1 || choice > suspects.size()){
             try{
+                Scanner sc= new Scanner(System.in);
                 choice = sc.nextInt();
             }
-            catch(NumberFormatException e){
-                System.out.println("Enter valid input.");
+            catch(Exception e){
+                System.out.println("Enter valid input.Try again.");
             }
         }
         who = new Card("Suspect",suspects.get(choice-1).getValue());
-        
+
+        System.out.println("Which Weapon do you want to suggest?");
         choice = -1;
         i = 0;
-        System.out.println("Which Weapon do you want to suggest?");
         for(Card curr : weapons)
             System.out.println(++i + ". " + curr.getValue());
         
         //loop until valid input
         while( choice < 1 || choice > weapons.size()){
             try{
+                Scanner sc = new Scanner(System.in);
                 choice = sc.nextInt();
             }
-            catch(NumberFormatException e){
-                System.out.println("Enter valid input.");
+            catch(Exception e){
+                System.out.println("Enter valid input.Try again.");
             }
         }
         what = new Card("Weapon",weapons.get(choice-1).getValue());
@@ -130,26 +135,36 @@ public class Human implements IPlayer
         System.out.println("Which Location do you want to suggest?");
         for(Card curr : locations)
             System.out.println(++i + ". " + curr.getValue());
-            
         //loop until valid input
         while( choice < 1 || choice > locations.size()){
             try{
+                Scanner sc = new Scanner(System.in);
                 choice = sc.nextInt();
             }
-            catch(NumberFormatException e){
-                System.out.println("Enter valid input.");
+            catch(Exception e){
+                System.out.println("Enter valid input.Try again.");
             }
         }
         where = new Card("Location",locations.get(choice-1).getValue());
 
         //check if player wants to accuse or suggest
         System.out.println("Is it an Accusation ?[Y/N] : ");
-        choiceOfSugg = sc.next();
-        if(choiceOfSugg.equals("Y") || choiceOfSugg.equals("y"))
-            isSuggestion = false;
-        else if(choiceOfSugg.equals("N") || choiceOfSugg.equals("n"))
-            isSuggestion = true;
+        choiceOfSugg = "x";
 
+        while(choiceOfSugg.equals("x")) {
+
+            Scanner sc = new Scanner(System.in);
+            choiceOfSugg = sc.next();
+
+            if (choiceOfSugg.equals("Y") || choiceOfSugg.equals("y"))
+                isSuggestion = false;
+            else if (choiceOfSugg.equals("N") || choiceOfSugg.equals("n"))
+                isSuggestion = true;
+            else {
+                System.out.println("Enter Valid Input.Try again");
+                choiceOfSugg = "x";
+            }
+        }
             //return the new guess
         return new Guess(who,what,where,isSuggestion);
     }
