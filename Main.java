@@ -22,28 +22,28 @@ public class Main
         pplNames.add(new Card("Suspect","Miss Scarlet"));
         pplNames.add(new Card("Suspect","Mr Green"));
         pplNames.add(new Card("Suspect","Mrs Peacock"));
-        /*pplNames.add(new Card("Suspect","Professor Plum"));
+        pplNames.add(new Card("Suspect","Professor Plum"));
         pplNames.add(new Card("Suspect","Mrs White"));
-        pplNames.add(new Card("Suspect","Colonel Mustard"));*/
+        //pplNames.add(new Card("Suspect","Colonel Mustard"));
 
         weaponsNames.add(new Card("Weapon","Revolver"));
         weaponsNames.add(new Card("Weapon","Dagger"));
         weaponsNames.add(new Card("Weapon","Pipe"));
-        /*weaponsNames.add(new Card("Weapon","Rope"));
+        weaponsNames.add(new Card("Weapon","Rope"));
         weaponsNames.add(new Card("Weapon","Candlestick"));
         weaponsNames.add(new Card("Weapon","Wrench"));
         weaponsNames.add(new Card("Weapon","Sword"));
-        weaponsNames.add(new Card("Weapon","Belt"));
+        /*weaponsNames.add(new Card("Weapon","Belt"));
         weaponsNames.add(new Card("Weapon","COVID"));*/
 
         locationsNames.add(new Card("Location","Dining Room"));
         locationsNames.add(new Card("Location","Lounge"));
-        /*locationsNames.add(new Card("Location","Kitchen"));
+        locationsNames.add(new Card("Location","Kitchen"));
         locationsNames.add(new Card("Location","Study"));
         locationsNames.add(new Card("Location","Hall"));
         locationsNames.add(new Card("Location","Billiard Room"));
         locationsNames.add(new Card("Location","Conservatory"));
-        locationsNames.add(new Card("Location","Library"));
+       /* locationsNames.add(new Card("Location","Library"));
         locationsNames.add(new Card("Location","Bedroom"));
         locationsNames.add(new Card("Location","Cellar"));
         locationsNames.add(new Card("Location","Ballroom"));*/
