@@ -7,10 +7,11 @@ import java.util.*;
 
 public class Main
 {
-    //total number of players including human players
-    private static int totalPlayers;
+
 
     public static void main(String[] args){
+        //total number of players including human players
+        int totalPlayers;
         //Arraylist of Players,Suspects cards, Weapons cards, location cards
         ArrayList<IPlayer> playerList = new ArrayList<IPlayer> ();
         ArrayList<Card> pplNames= new ArrayList<Card> ();
