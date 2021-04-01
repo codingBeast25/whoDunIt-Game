@@ -1,5 +1,5 @@
 /*
- * Name: Kabir Bhakta  Student Number: 7900098
+ * Name: Kabir Bhakta , Student Number: 7900098
  * Purpose: This class provides blue print for card object
  */
 import java.util.*;
