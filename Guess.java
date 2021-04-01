@@ -1,13 +1,18 @@
+/*
+ * Name: Kabir Bhakta  Student Number: 7900098
+ * Purpose: This class provides all information about a players guess.
+ */
 import java.util.*;
 
 public class Guess
 {
-    private Card who;
-    private Card what;
-    private Card where;
+    private Card who; //who is the suspect?
+    private Card what; //with which weapon?
+    private Card where; //where did it take place?
     
-    private boolean isSuggestion;
+    private boolean isSuggestion; //was it accusation or guess
     
+    //constructor
     public Guess(Card who,Card what,Card where,boolean isSuggestion)
     {
         this.who = who;
@@ -16,6 +21,7 @@ public class Guess
         this.isSuggestion = isSuggestion;
     }
     
+    //returns the guessed cards
     public ArrayList<Card> getGuessCards()
     {
         ArrayList<Card> retList = new ArrayList<Card> ();
@@ -25,13 +31,15 @@ public class Guess
         return retList;
     }
     
+    //returns whether it was a suggestion or accusation
     public boolean isItSuggestion()
     {
         return isSuggestion;
     }
     
+    //prints the guess that player made
     public String toString()
     {
-        return who.getValue() + " in " + where.getValue() + " with " + what.getValue(); 
+        return who.getValue() + " with " + what.getValue() + " in " + where.getValue()+ "."; 
     }
 }

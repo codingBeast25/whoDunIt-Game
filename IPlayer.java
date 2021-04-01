@@ -1,3 +1,8 @@
+/*
+* Name: Kabir Bhakta  Student Number: 7900098
+* Purpose: This is the interface for our Human and Computer class
+ */
+
 import java.util.ArrayList;
 
 public interface IPlayer {
